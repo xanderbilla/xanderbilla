@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+<title>Exp 6 | 20CS41P</title>
+<style>
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+
+html {
+    min-height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Inconsolata", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: rgba(128, 255, 128, 0.8);
+}
+
+.noise {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.02;
+}
+
+.overlay {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background-size: auto 4px;
+    z-index: 1;
+}
+
+@keyframes scan {
+    0% {
+        background-position: 0 -100vh;
+    }
+    35%,
+    100% {
+        background-position: 0 100vh;
+    }
+}
+
+.terminal {
+    position: absolute;
+    height: 100%;
+    width: 1500px;
+    max-width: 100%;
+    padding: 6rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.errorcode {
+    color: white;
+}
+
+footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-child(even) {
+  background-color: #181b1b
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: #4a4b4b;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+<body>
+
+    <div class="noise"></div>
+    <div class="overlay"></div>
+    <div class="terminal">
+        <h1>20CS41P |<span class="errorcode"> DATA STRUCTURE AND ALGORITHM WITH PYTHON (LAB)</span></h1>
+        <hr color=" #1d5624">
+        <h2>Exp6: Program to implement Bubble Sort</h2>
+        
+    
+    <div class="cheat">
+        <span class="errorcode">
+        <pre>
+            <code>
+#**********************************************************************************#
+# Program to implememnt Bubble Sort                                                #
+#**********************************************************************************#
+
+ 
+n = int(input("Enter a number of element: "))
+l =[]
+for i in range(n):
+    x = int(input("Enter element: "))
+    l.append(x)
+print("Unsorted list: ", l)
+ 
+for i in range(n - 1):
+        for j in range(n - 1):
+            if (l[j] > l [j + 1]):
+                temp = l[j]
+                l[j] = l[j + 1]
+                l[j + 1] = temp
+print("Sorted list:", l)
+           </code>
+        </pre> 
+        </span>
+</div>
+
+<b>----------------------------------Output: -----------------------------</b>
+
+<span class="errorcode">   
+<pre>
+        <code>
+Unsorted list: [25, 23, 32, 85, 77, 45, 12]
+Sorted list: [12, 23, 25, 32, 45, 77, 85]
+        </code>
+    </pre> 
+</span>
+
+<div id="footer">
+ 
+    <center><p>-----------------------------------------------------------</p></center>
+    <center><p>Copyright (c) 2022 Professor | ᓕᘏᗢ <br>All rights reserved</p></center>
+ </div> 
+</div>
+</div>
+</body>
+</html>
