@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-<title>Exp 6 | 20CS41P</title>
+<title>Exp 2 | 20CS41P</title>
 <style>
 @import "https://fonts.googleapis.com/css?family=Inconsolata";
 
@@ -98,35 +98,33 @@ th:nth-child(even),td:nth-child(even) {
     <div class="noise"></div>
     <div class="overlay"></div>
     <div class="terminal">
-        <h1>20CS41P |<span class="errorcode"> DATA STRUCTURE AND ALGORITHM WITH PYTHON (LAB)</span></h1>
+        <h1><a href="20CS41P_Lab.html">20CS41P</a> |DATA STRUCTURE AND ALGORITHM WITH PYTHON (LAB)</h1>
         <hr color=" #1d5624">
-        <h2>Exp6: Program to implement Bubble Sort</h2>
+        <h2>Exp1: Program to find factorial of a given number using recursion</h2>
         
     
     <div class="cheat">
         <span class="errorcode">
         <pre>
             <code>
-#**********************************************************************************#
-# Program to implememnt Bubble Sort                                                #
-#**********************************************************************************#
+#***************************************************************#
+# Exp2: Program to find factorial of a given number using       #
+#       Recursion                                               #
+#***************************************************************#
 
  
-n = int(input("Enter a number of element: "))
-l =[]
-for i in range(n):
-    x = int(input("Enter element: "))
-    l.append(x)
-print("Unsorted list: ", l)
+def fact(n):
+    global f
+    if n==1:
+        return
+    f = f * n
+    fact(n - 1)
  
-for i in range(n - 1):
-        for j in range(n - 1):
-            if (l[j] > l [j + 1]):
-                temp = l[j]
-                l[j] = l[j + 1]
-                l[j + 1] = temp
-print("Sorted list:", l)
-           </code>
+n = int(input("Enter a number: "))
+f = 1
+fact(n)
+print("Factorial of {} is {}".format(n,f))
+            </code>
         </pre> 
         </span>
 </div>
@@ -136,8 +134,8 @@ print("Sorted list:", l)
 <span class="errorcode">   
 <pre>
         <code>
-Unsorted list: [25, 23, 32, 85, 77, 45, 12]
-Sorted list: [12, 23, 25, 32, 45, 77, 85]
+Enter a number: 4
+Factorial of 4 is 24
         </code>
     </pre> 
 </span>

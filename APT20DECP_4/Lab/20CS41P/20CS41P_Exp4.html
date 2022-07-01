@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-<title>Exp 2 | 20CS41P</title>
+<title>Exp 4 | 20CS41P</title>
 <style>
 @import "https://fonts.googleapis.com/css?family=Inconsolata";
 
@@ -98,33 +98,37 @@ th:nth-child(even),td:nth-child(even) {
     <div class="noise"></div>
     <div class="overlay"></div>
     <div class="terminal">
-        <h1>20CS41P |<span class="errorcode"> DATA STRUCTURE AND ALGORITHM WITH PYTHON (LAB)</span></h1>
+        <h1><a href="20CS41P_Lab.html">20CS41P</a> | DATA STRUCTURE AND ALGORITHM WITH PYTHON (LAB)</h1>
         <hr color=" #1d5624">
-        <h2>Exp1: Program to find factorial of a given number using recursion</h2>
+        <h2>Exp4: Program to implement Linear search</h2>
         
     
     <div class="cheat">
         <span class="errorcode">
         <pre>
             <code>
-#***************************************************************#
-# Exp2: Program to find factorial of a given number using       #
-#       Recursion                                               #
-#***************************************************************#
+#**********************************************************************************#
+# Program on Linear Search                                                         #
+#**********************************************************************************#
 
  
-def fact(n):
-    global f
-    if n==1:
-        return
-    f = f * n
-    fact(n - 1)
+n = int(input("Enter a number of element: "))
+l =[]
+for i in range(n):
+    x = int(input("Enter element: "))
+    l.append(x)
+print(l)
  
-n = int(input("Enter a number: "))
-f = 1
-fact(n)
-print("Factorial of {} is {}".format(n,f))
-            </code>
+key = int(input("Enter key element: "))
+i = 0
+while(i < n):
+    if (key == l[i]):
+        print("Element found at {} position".format(i))
+        break
+    i += 1
+else:
+    print("Element not present in list")
+           </code>
         </pre> 
         </span>
 </div>
@@ -134,8 +138,25 @@ print("Factorial of {} is {}".format(n,f))
 <span class="errorcode">   
 <pre>
         <code>
-Enter a number: 4
-Factorial of 4 is 24
+Enter a number of element: 5
+Enter element: 12
+Enter element: 56
+Enter element: 78
+Enter element: 98
+Enter element: 4
+[12, 56, 78, 98, 4]
+Enter key element: 56
+Element found at 1 position
+
+Enter a number of element: 5
+Enter element: 45
+Enter element: 12
+Enter element: 23
+Enter element: 2
+Enter element: 78
+[45, 12, 23, 2, 78]
+Enter key element: 56
+Element not present in list
         </code>
     </pre> 
 </span>

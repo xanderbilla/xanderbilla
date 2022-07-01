@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-<title>Exp 1 | 20CS41P</title>
+<title>Exp 6 | 20CS41P</title>
 <style>
 @import "https://fonts.googleapis.com/css?family=Inconsolata";
 
@@ -98,46 +98,35 @@ th:nth-child(even),td:nth-child(even) {
     <div class="noise"></div>
     <div class="overlay"></div>
     <div class="terminal">
-        <h1><a href="/20CS41P_Lab/20CS41P_Lab.html"> 20CS41P</a> |DATA STRUCTURE AND ALGORITHM WITH PYTHON (LAB)</h1>
+        <h1><a href="20CS41P_Lab.html">20CS41P</a> | DATA STRUCTURE AND ALGORITHM WITH PYTHON (LAB)</h1>
         <hr color=" #1d5624">
-        <h2>Exp1: Program on basic data structure</h2>
+        <h2>Exp6: Program to implement Bubble Sort</h2>
         
     
     <div class="cheat">
         <span class="errorcode">
         <pre>
             <code>
-#***************************************************************#
-# Exp1: Program on Basic Data Structure                         #
-#***************************************************************#
+#**********************************************************************************#
+# Program to implememnt Bubble Sort                                                #
+#**********************************************************************************#
 
-x = [2,6,3,4,8,9,1,7,8,5,8]
-print("The list in the begining is\n", x)
-
-x.append(12)
-print("The list after appending 12 is\n", x)
-
-print("8 counts {} times".format(x.count(8)))
-
-x.insert(3,15)
-print("The list after inserting 15 at position 3 is\n", x)
-
-x.pop()
-print("The list after popping last element\n", x)
-
-x.remove(6)
-print("The list after removing the element 6 is\n",x)
-
-x.reverse()
-print("The reversal of list is\n",x)
-
-x.sort()
-print("The sortedlist is \n",x)
-
-print("The index of 4 is",x.index(4))
-
-
-            </code>
+ 
+n = int(input("Enter a number of element: "))
+l =[]
+for i in range(n):
+    x = int(input("Enter element: "))
+    l.append(x)
+print("Unsorted list: ", l)
+ 
+for i in range(n - 1):
+        for j in range(n - 1):
+            if (l[j] > l [j + 1]):
+                temp = l[j]
+                l[j] = l[j + 1]
+                l[j + 1] = temp
+print("Sorted list:", l)
+           </code>
         </pre> 
         </span>
 </div>
@@ -147,30 +136,8 @@ print("The index of 4 is",x.index(4))
 <span class="errorcode">   
 <pre>
         <code>
-The list in the begining is
-[2, 6, 3, 4, 8, 9, 1, 7, 8, 5, 8]
-
-The list after appending 12 is
-[2, 6, 3, 4, 8, 9, 1, 7, 8, 5, 8, 12]     
-
-8 counts 3 times
-
-The list after inserting 15 at position 3 is
-[2, 6, 3, 15, 4, 8, 9, 1, 7, 8, 5, 8, 12] 
-
-The list after popping last element
-[2, 6, 3, 15, 4, 8, 9, 1, 7, 8, 5, 8]     
-
-The list after removing the element 6 is   
-[2, 3, 15, 4, 8, 9, 1, 7, 8, 5, 8]
-
-The reversal of list is
-[8, 5, 8, 7, 1, 9, 8, 4, 15, 3, 2]
-
-The sortedlist is
-[1, 2, 3, 4, 5, 7, 8, 8, 8, 9, 15]
-
-The index of 4 is 3
+Unsorted list: [25, 23, 32, 85, 77, 45, 12]
+Sorted list: [12, 23, 25, 32, 45, 77, 85]
         </code>
     </pre> 
 </span>

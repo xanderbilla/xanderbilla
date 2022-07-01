@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-<title>Exp 4 | 20CS41P</title>
+<title>Exp 1 | 20CS41P</title>
 <style>
 @import "https://fonts.googleapis.com/css?family=Inconsolata";
 
@@ -98,37 +98,46 @@ th:nth-child(even),td:nth-child(even) {
     <div class="noise"></div>
     <div class="overlay"></div>
     <div class="terminal">
-        <h1>20CS41P |<span class="errorcode"> DATA STRUCTURE AND ALGORITHM WITH PYTHON (LAB)</span></h1>
+        <h1><a href="20CS41P_Lab.html">20CS41P</a> |DATA STRUCTURE AND ALGORITHM WITH PYTHON (LAB)</h1>
         <hr color=" #1d5624">
-        <h2>Exp4: Program to implement Linear search</h2>
+        <h2>Exp1: Program on basic data structure</h2>
         
     
     <div class="cheat">
         <span class="errorcode">
         <pre>
             <code>
-#**********************************************************************************#
-# Program on Linear Search                                                         #
-#**********************************************************************************#
+#***************************************************************#
+# Exp1: Program on Basic Data Structure                         #
+#***************************************************************#
 
- 
-n = int(input("Enter a number of element: "))
-l =[]
-for i in range(n):
-    x = int(input("Enter element: "))
-    l.append(x)
-print(l)
- 
-key = int(input("Enter key element: "))
-i = 0
-while(i < n):
-    if (key == l[i]):
-        print("Element found at {} position".format(i))
-        break
-    i += 1
-else:
-    print("Element not present in list")
-           </code>
+x = [2,6,3,4,8,9,1,7,8,5,8]
+print("The list in the begining is\n", x)
+
+x.append(12)
+print("The list after appending 12 is\n", x)
+
+print("8 counts {} times".format(x.count(8)))
+
+x.insert(3,15)
+print("The list after inserting 15 at position 3 is\n", x)
+
+x.pop()
+print("The list after popping last element\n", x)
+
+x.remove(6)
+print("The list after removing the element 6 is\n",x)
+
+x.reverse()
+print("The reversal of list is\n",x)
+
+x.sort()
+print("The sortedlist is \n",x)
+
+print("The index of 4 is",x.index(4))
+
+
+            </code>
         </pre> 
         </span>
 </div>
@@ -138,25 +147,30 @@ else:
 <span class="errorcode">   
 <pre>
         <code>
-Enter a number of element: 5
-Enter element: 12
-Enter element: 56
-Enter element: 78
-Enter element: 98
-Enter element: 4
-[12, 56, 78, 98, 4]
-Enter key element: 56
-Element found at 1 position
+The list in the begining is
+[2, 6, 3, 4, 8, 9, 1, 7, 8, 5, 8]
 
-Enter a number of element: 5
-Enter element: 45
-Enter element: 12
-Enter element: 23
-Enter element: 2
-Enter element: 78
-[45, 12, 23, 2, 78]
-Enter key element: 56
-Element not present in list
+The list after appending 12 is
+[2, 6, 3, 4, 8, 9, 1, 7, 8, 5, 8, 12]     
+
+8 counts 3 times
+
+The list after inserting 15 at position 3 is
+[2, 6, 3, 15, 4, 8, 9, 1, 7, 8, 5, 8, 12] 
+
+The list after popping last element
+[2, 6, 3, 15, 4, 8, 9, 1, 7, 8, 5, 8]     
+
+The list after removing the element 6 is   
+[2, 3, 15, 4, 8, 9, 1, 7, 8, 5, 8]
+
+The reversal of list is
+[8, 5, 8, 7, 1, 9, 8, 4, 15, 3, 2]
+
+The sortedlist is
+[1, 2, 3, 4, 5, 7, 8, 8, 8, 9, 15]
+
+The index of 4 is 3
         </code>
     </pre> 
 </span>
