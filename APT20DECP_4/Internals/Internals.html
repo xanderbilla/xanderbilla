@@ -1,0 +1,191 @@
+<html lang="en">
+<head>
+<title>Internal Resource</title>
+<style>
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+
+html {
+    min-height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Inconsolata", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: rgba(128, 255, 128, 0.8);
+}
+
+.noise {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.02;
+}
+
+.overlay {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background-size: auto 4px;
+    z-index: 1;
+}
+
+@keyframes scan {
+    0% {
+        background-position: 0 -100vh;
+    }
+    35%,
+    100% {
+        background-position: 0 100vh;
+    }
+}
+
+.terminal {
+    position: absolute;
+    height: 100%;
+    width: 1500px;
+    max-width: 100%;
+    padding: 6rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.errorcode {
+    color: white;
+}
+
+footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td{
+    font-size: 26px;
+    text-align:center;
+}
+
+tr:nth-child(even) {
+  background-color: #181b1b
+}
+
+</style>
+</head>
+<body>
+
+    <div class="noise"></div>
+    <div class="overlay"></div>
+    <div class="terminal">
+        <h1><a href="../Robot.html">IV SEMESTER</a> | Internals Resource</h1>
+
+
+        <marquee direction = "left", bgcolor = "#252b25"><b>Internal II is expected on July 14 and July 15 | Internal Q/A is attached in following date sheet</b></marquee>
+  
+        <h2 style="text-align: center;">Internal Schedule</h2>
+
+        <div class="cheat">
+            <table align="center">
+                <tr>
+                    <th colspan="4">Internal I</th>
+                </tr>
+                <tr>
+                    <th style="width:10%">SCODE</th>
+                    <th>Subject</th>
+                    <th style="width:20%">Theory</th>
+                    <th>Practical</th>
+                  </tr>
+                  <tr>
+                    <td>20CS41P</td>
+                    <td><a href="IA_Files/20CS41P_IA_I.html">Data Structure with Python</a></td>
+                    <td>16/06/2022</td>
+                    <td>TBA</td>
+                 </tr>
+                 <tr>
+                    <td>20CS42P</td>
+                    <td><a href="IA_Files/20CS42P_IA_I.html">Operating System and Administration</a></td>
+                    <td>16/06/2022</td>
+                    <td>05/07/2022 (B2) / 06/07/2022 (B1)</td>
+                 </tr>
+                 <tr>
+                    <td>20CS43P</td>
+                    <td><a href="IA_Files/20CS43P_IA_I.html">OOPs and Design with JAVA</a></td>
+                    <td>17/06/2022</td>
+                    <td>20/06/2022 (B2) / 23/06/2022 (B1)</td>
+                 </tr>
+                 <tr>
+                    <td>20CS44P</td>
+                    <td><a href="IA_Files/20CS44P_IA_I.html">Software Engineering</a></td>
+                    <td>17/06/2022</td>
+                    <td>TBA</td>
+                 </tr>
+            </table>
+
+            <br>
+
+        <div class="cheat">
+            <table align="center">
+                <tr>
+                    <th colspan="4">Internal II</th>
+                </tr>
+                <tr>
+                    <tr>
+                        <th style="width:10%">SCODE</th>
+                        <th>Subject</th>
+                        <th style="width:20%">Theory</th>
+                        <th>Practical</th>
+                      </tr>
+                    <tr>
+                        <td>20CS41P</td>
+                        <td><a href="IA_Files/20CS41P_IA_II.html">Data Structure with Python</a></td>
+                        <td>TBA</td>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <td>20CS42P</td>
+                        <td><a href="IA_Files/20CS42P_IA_II.html">Operating System and Administration</a></td>
+                        <td>TBA</td>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <td>20CS43P</td>
+                        <td><a href="IA_Files/20CS43P_IA_II.html">OOPs and Design with JAVA</a></td>
+                        <td>TBA</td>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <td>20CS44P</td>
+                        <td><a href="IA_Files/20CS44P_IA_II.html">Software Engineering</a></td>
+                        <td>TBA</td>
+                        <td>TBA</td>
+                    </tr>
+            </table>
+    
+    
+  <div id="footer">
+ 
+    <center><p>-----------------------------------------------------------</p></center>
+    <center><p>Copyright (c) 2022 Professor | ᓕᘏᗢ <br>All rights reserved</p></center>
+ </div> 
+</div>
+</div>
+</body>
+</html>
