@@ -1,0 +1,358 @@
+<html lang="en">
+<head>
+<title>Internal I | 20CS41P</title>
+<style>
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+
+html {
+    min-height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Inconsolata", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: rgba(128, 255, 128, 0.8);
+}
+
+.noise {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.02;
+}
+
+.overlay {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background-size: auto 4px;
+    z-index: 1;
+}
+
+@keyframes scan {
+    0% {
+        background-position: 0 -100vh;
+    }
+    35%,
+    100% {
+        background-position: 0 100vh;
+    }
+}
+
+.terminal {
+    position: absolute;
+    height: 100%;
+    width: 1500px;
+    max-width: 100%;
+    padding: 6rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.errorcode {
+    color: white;
+}
+
+footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-child(even) {
+  background-color: #181b1b
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: #4a4b4b;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+<body>
+
+    <div class="noise"></div>
+    <div class="overlay"></div>
+    <div class="terminal">
+        <h1><a href="../Internals.html">20CS41P</a> | Internal I</h1>
+        <hr color=" #1d5624">
+ 
+        <p style="color: #02ffff">1] Write a program for Linear Search.</p>
+                <pre>
+                    <code>
+    n = int(input("Enter a number of element: "))
+    l =[]
+    for i in range(n):
+        x = int(input("Enter element: "))
+        l.append(x)
+    print(l)
+        
+    key = int(input("Enter key element: "))
+    i = 0
+    while(i < n):
+        if (key == l[i]):
+            print("Element found at {} position".format(i))
+            break
+        i += 1
+    else:
+        print("Element not present in list")
+                   </code>
+                </pre> 
+
+<p style="color: #02ffff"> 2] Write a program for Binary Search.</p>
+<pre>
+    <code>
+    def binary_search(l, n):            
+        low = 0                
+        high  = len(l) - 1
+        mid = 0
+        while low <= high :
+        mid = (high + low) // 2                
+        if l[mid] < n:                
+            low = mid + 1                
+        elif l[mid] > n:                
+            high = mid - 1                
+        else:                
+            return mid                
+    return -1
+                                        
+    l = [10,20,21,45,56,45]                
+    l.sort()                
+    n = 21                
+    result = binary_search(l, n)            
+                        
+    if result != -1:                
+        print("Element {} present at index {}".format(n,result))                
+    else:                
+        print("Element not found")
+                    </code>
+                </pre>    
+
+<p style="color: #02ffff">3] Write a program for Bubble Sort.</p>
+<pre>
+    <code>                               
+    def bubble_sort(l):                
+        for i in range(len(l) - 1):                
+            for j in range(len(l) - 1):                
+                if (l[j] > l [j + 1]):                
+                    temp = l[j]                
+                    l[j] = l[j + 1]                
+                    l[j + 1] = temp                
+        return l         
+        
+    l = [25,23,32,85,77,45,12]                
+    print("Unsorted list: ", l)                
+    print("Sorted list: ", bubble_sort(l))     
+                   </code>
+                </pre>    
+                
+<p style="color: #02ffff"></p>4] Write a program for selection Sort.</p>
+<pre>
+    <code>
+    n = int(input("Enter a number of element"))                
+    l =[]                
+    for i in range(n):                
+        x = int(input("Enter element"))                
+        l.append(x)                
+    print(l)
+
+    for i in range(n):                
+            small = i    
+            for j in range(i + 1, n):                
+                if l[j] < l[small]:                
+                        small = j                
+            (l[i], l[small]) = (l[small], l[i])                
+    print("Sorted element are: ",l )
+                   </code>
+                </pre>   
+                
+<p style="color: #02ffff"></p>5] Write a program for Fibonacci Series.</p>
+<pre>
+    <code>
+def recur_fibo(n):                 
+    if n <= 1:                  
+        return n                  
+    else:                  
+        return(recur_fibo(n-1) + recur_fibo(n-2))                
+    
+for i in range(t):                
+    print(recur_fibo(i))
+
+<p style="color: #02ffff">6] Write a program for Factorial of a given number.</p>
+<pre>
+    <code>
+n = int(input("Enter a number: "))                
+fact = 1                
+for i in range(1,n+1):                
+    fact *= i                
+print("Factorial of {} is {}".format(n, fact))  
+                   </code>
+                </pre>  
+                
+<p style="color: #02ffff">7] Write a program to find GCD of two number.</p>
+<pre>
+    <code>
+    a = int(input("Enter I number: "))                
+    b = int(input("Enter II number: "))                
+    while(a != b):                
+        if (a > b):                
+            a -= b                
+        else:                
+            b -= a                
+    else:                
+        print("GCD is {}".format(a))       
+                   </code>
+                </pre>
+                
+<p style="color: #02ffff">8] Write an algorithm for stack (Last-In, First-Out).</p>
+<pre>
+    <code>
+    def push():                
+        global top                
+        if (top == size - 1):                
+            print("Stack Overflow")  
+    
+        top += 1                
+        item = int(input("Enter a number to be inserted: "))                
+        x.insert(top, item)               
+        
+    def pop():                
+        global top                
+        if (top == -1):                
+            print("Stack Underflow")              
+        
+    
+        print("The element {} is removed".format(x[top]))                
+        x.remove(x[top])                
+        top -= 1                
+                    
+    def display():                
+        global top                
+        if (top == -1):                
+            print("Stack is empty")                
+        print(x)           
+        
+    
+    x = []               
+    top = -1                
+    size = 5                
+                        
+    while True:                
+        print("""    
+    
+        Select your choice:
+    
+        1) Insert element in stack                
+        2) Remove element from stack                
+        3) Display the stack                
+        other) exit                
+        """)  
+    
+        ch = int(input("Enter your choice: "))                
+        if ch == 1:                
+            push()                
+        elif ch == 2:                
+            pop()                
+        elif ch == 3:                
+            display()                
+        else:                
+            print("Invalid option")                
+            exit(0)               
+                   </code>
+                </pre>  
+                
+<p style="color: #02ffff">9] Write an algorithm for Queue (First-In, First-Out).</p>
+<pre>
+    <code>
+    def q_insert():                
+        global rear                
+        if(rear == size-1):                
+            print("queue is full \n")                
+            return
+    
+        item = int(input("Enter item to be  inserted: "))                
+        rear += 1
+    
+        x.insert(rear, item)              
+        
+    
+    def q_delete():                
+        global rear                
+        if(front > rear):                
+            print("Queue is empty")                
+            return
+    
+        print("Deleted element is {}".format(x[front]))                
+        x.remove(x[front])                
+        rear -= 1              
+    
+    def display():                
+        if(front > rear):                
+            print("Queue is empty")                
+            return                
+        for i in range(front, rear + 1):                
+            print(x[i])               
+        
+    x = []                
+    size = 5                
+    rear = -1                
+    front = 0                
+                    
+    while True:                
+        print("""    
+    
+        Select anyone option:   
+    
+        1) Insert element in queue                
+        2) Remove element from queue                
+        3) Display the queue                
+        other) exit
+    
+        """)  
+    
+        ch = int(input("Enter your choice: "))                
+        if ch == 1:                
+            q_insert()                
+        elif ch == 2:                
+            q_delete()                
+        elif ch == 3:                
+            display()                
+        else:                
+            print("Invalid option")                
+            exit(0)
+                   </code>
+                </pre> 
+                
+<div id="footer">
+ 
+    <center><p>-----------------------------------------------------------</p></center>
+    <center><p>Copyright (c) 2022 Professor | ᓕᘏᗢ <br>All rights reserved</p></center><br>
+ </div> 
+</div>
+</div>
+</body>
+</html>
