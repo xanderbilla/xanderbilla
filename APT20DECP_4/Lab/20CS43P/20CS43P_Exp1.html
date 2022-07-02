@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+<title>Exp 1 | 20CS43P</title>
+<style>
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+
+html {
+    min-height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Inconsolata", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: rgba(128, 255, 128, 0.8);
+}
+
+.noise {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.02;
+}
+
+.overlay {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background-size: auto 4px;
+    z-index: 1;
+}
+
+@keyframes scan {
+    0% {
+        background-position: 0 -100vh;
+    }
+    35%,
+    100% {
+        background-position: 0 100vh;
+    }
+}
+
+.terminal {
+    position: absolute;
+    height: 100%;
+    width: 1500px;
+    max-width: 100%;
+    padding: 6rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.errorcode {
+    color: white;
+}
+
+footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-child(even) {
+  background-color: #181b1b
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: #4a4b4b;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+<body>
+
+    <div class="noise"></div>
+    <div class="overlay"></div>
+    <div class="terminal">
+        <h1><a href="20CS43P_Lab.html">20CS43P</a> | OOPs AND DESIGN WITH JAVA (LAB)</h1>
+        <hr color=" #1d5624">
+        <h2>Exp1: Install and setup JAVA environment</h2>
+        
+    
+    <div class="cheat">
+        <span class="errorcode">
+        
+a)   Install java editor (Eclipse for Enterprise Java) and configure workspace
+
+ 
+
+STEP 1: Install JDK - To use Eclipse for Java programming, you need to first install Java Development Kit (JDK). Read "How to Install JDK for Windows".
+STEP 2: Download - Download Eclipse from https://www.eclipse.org/downloads/packages/. Choose "Eclipse IDE for Java Developers" and "Windows x86_64" (e.g., "eclipse-java-2021-12-R-win32-x86_64.zip" - about 313MB) ⇒ Download.
+STEP 3: Unzip: To install Eclipse, simply unzip the downloaded file into a directory of your choice (e.g., "c:\myProject").
+I prefer the zip version, because there is no need to run any installer. Moreover, you can simply delete the entire Eclipse directory when it is no longer needed (without running any un-installer). You are free to move or rename the directory. You can install (unzip) multiple copies of Eclipse in the same machine.
+
+b)   Execution of first java program
+
+
+STEP 1: Launch Eclipse
+1.    Launch Eclipse by running "eclipse.exe" from the Eclipse installed directory.
+2.    Choose an appropriate directory for your workspace, i.e., where you would like to save your files (e.g., c:\myProject\eclipse for Windows) ⇒ Launch.
+3.    If the "Welcome" screen shows up, close it by clicking the "close" button next to the "Welcome" title.
+
+STEP 2: Create a new Java Project
+    For each Java application, you need to create a project to keep all the source files, classes and relevant resources.
+
+    To create a new Java project:
+
+    1.    Choose "File" menu ⇒ "New" ⇒ "Java project" (or "File" ⇒ "New" ⇒ "Project" ⇒ "Java project").
+    2.    The "New Java Project" dialog pops up.
+        a.    In "Project name", enter "FirstProject".
+        b.   Check "Use default location".
+        c.    In "JRE", select "Use an execution environment JRE (JavaSE-17). Make sure that your JDK is 11 and above.
+        d.   In "Project Layout", check "Use project folder as root for sources and class files".
+        e.    In "Module", UNCHECK "Create module-info.java" file.
+
+    3.     Push "Finish" button.
+
+IF "Create module-info.java" dialog appears, Click "Don't Create".
+
+STEP 3: Write a Hello-world Java Program
+1.    In the "Package Explorer" (left pane) ⇒ Right-click on "FirstProject" (or use the "File" menu) ⇒ New ⇒ Class.
+
+2.    The "New Java Class" dialog pops up.
+
+a.    In "Source folder", keep the "FirstProject".
+
+b.   In "Package", leave it EMPTY. Delete the content if it is not empty.
+
+c.    In "Name", enter "Hello".
+
+d.   Check " public static void main(String[] args) ".
+
+e.    Don't change the rest.
+
+Push "Finish" button.
+
+The source file "Hello.java" opens on the editor panel (the center pane). Enter the following codes:
+
+ 
+
+public class Hello {
+
+    public static void main(String[] args) {
+
+       System.out.println("Hello, world!");
+
+    }
+
+}
+
+ 
+
+ 
+
+STEP 4: Compile & Execute the Java Program
+1.    There is no need to compile the Java source file in Eclipse explicitly. It is because Eclipse performs the so-called incremental compilation, i.e., the Java statement is compiled as and when it is entered.
+
+2.    To run the program, right-click anywhere on the source file "Hello.java" (or choose "Run" menu) ⇒ Run As ⇒ Java Application.
+
+3.    The output "Hello, world!" appears on the Console panel (the bottom pane).
+
+
+</span>
+
+<div id="footer">
+ 
+    <center><p>-----------------------------------------------------------</p></center>
+    <center><p>Copyright (c) 2022 Professor | ᓕᘏᗢ <br>All rights reserved</p></center><br>
+ </div> 
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+<title>Exp 7 | 20CS43P</title>
+<style>
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+
+html {
+    min-height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Inconsolata", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: rgba(128, 255, 128, 0.8);
+}
+
+.noise {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.02;
+}
+
+.overlay {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background-size: auto 4px;
+    z-index: 1;
+}
+
+@keyframes scan {
+    0% {
+        background-position: 0 -100vh;
+    }
+    35%,
+    100% {
+        background-position: 0 100vh;
+    }
+}
+
+.terminal {
+    position: absolute;
+    height: 100%;
+    width: 1500px;
+    max-width: 100%;
+    padding: 6rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.errorcode {
+    color: white;
+}
+
+footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-child(even) {
+  background-color: #181b1b
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: #4a4b4b;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+<body>
+
+    <div class="noise"></div>
+    <div class="overlay"></div>
+    <div class="terminal">
+        <h1><a href="20CS43P_Lab.html">20CS43P</a> | OOPs AND DESIGN WITH JAVA (LAB)</h1>
+        <hr color=" #1d5624">
+        <h2>Exp7: Code execute and debug program that uses inheritance concept</h2>
+        
+    
+    <div class="cheat">
+
+        <p><strong>b) Write a JAVA program to demonstrate use of method overridding</strong></p>
+
+        <span class="errorcode">
+        <pre>
+            <code>
+/**************************************************************************
+Exp7:	Code, execute and debug programs that uses inhertiance concepts.
+--------------------------------------------------------------------------
+b.	write a JAVA program to implement Inheritance and demonstrate the 
+    use of method overriding
+**************************************************************************/
+
+class parent {
+    int a,b;
+
+    void set() {
+        a=10;
+        b=20;
+    }
+
+    void compute()  {
+
+    int c=a+b;
+    System.out.println("sum of a and b="+c);
+    }
+}
+
+class child extends parent {
+    int x,y;
+
+    void set1() {
+        x=100;
+        y=200;
+    }
+    
+    void compute()  {
+        int z= x*y;
+        System.out.println("in child class");
+        System.out.println("z="+z);
+    }
+}
+
+class Exp7b {
+    public static void main(String args[])
+    {
+        child C1=new child();
+        C1.set();
+        C1.set1();
+        C1.compute();
+    }
+}
+    
+            </code>
+        </pre> 
+        </span>
+</div>
+
+<b>----------------------------------Output: -----------------------------</b>
+
+<span class="errorcode">   
+<pre>
+        <code>
+z = 20000
+        </code>
+    </pre> 
+</span>
+
+<div id="footer">
+ 
+    <center><p>-----------------------------------------------------------</p></center>
+    <center><p>Copyright (c) 2022 Professor | ᓕᘏᗢ <br>All rights reserved</p></center><br>
+ </div> 
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+<title>Exp 5 | 20CS43P</title>
+<style>
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+
+html {
+    min-height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Inconsolata", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: rgba(128, 255, 128, 0.8);
+}
+
+.noise {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.02;
+}
+
+.overlay {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background-size: auto 4px;
+    z-index: 1;
+}
+
+@keyframes scan {
+    0% {
+        background-position: 0 -100vh;
+    }
+    35%,
+    100% {
+        background-position: 0 100vh;
+    }
+}
+
+.terminal {
+    position: absolute;
+    height: 100%;
+    width: 1500px;
+    max-width: 100%;
+    padding: 6rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.errorcode {
+    color: white;
+}
+
+footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-child(even) {
+  background-color: #181b1b
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: #4a4b4b;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+<body>
+
+    <div class="noise"></div>
+    <div class="overlay"></div>
+    <div class="terminal">
+        <h1><a href="20CS43P_Lab.html">20CS43P</a> | OOPs AND DESIGN WITH JAVA (LAB)</h1>
+        <hr color=" #1d5624">
+        <h2>Exp5: Code execute and debug program that use different control statements</h2>
+        
+    
+    <div class="cheat">
+        <p><strong>a) Decison Making Statments</strong></p>
+        <p><strong>iii. if elif statement</strong></p>
+
+        <span class="errorcode">
+        <pre>
+            <code>
+/**************************************************************************
+Exp5:	Code, execute and debug programs that uses different control 
+        statements.
+--------------------------------------------------------------------------
+b. Decison Making Statments
+**************************************************************************/
+
+//3. if-elif ladder Statment 
+class Exp5a3{  
+    public static void main(String[] args) {  
+        String city = "Delhi";  
+        
+            if(city == "Meerut") {  
+                System.out.println("city is meerut");  
+            }
+            else if (city == "Noida") {  
+                System.out.println("city is noida");  
+            }
+            else if(city == "Agra") {  
+                System.out.println("city is agra");  
+            }
+            else 
+            {  
+                System.out.println(city);  
+        }  
+    }  
+} 
+            </code>
+        </pre> 
+        </span>
+</div>
+
+<b>----------------------------------Output: -----------------------------</b>
+
+<span class="errorcode">   
+<pre>
+        <code>
+Delhi
+        </code>
+    </pre> 
+</span>
+
+<div id="footer">
+ 
+    <center><p>-----------------------------------------------------------</p></center>
+    <center><p>Copyright (c) 2022 Professor | ᓕᘏᗢ <br>All rights reserved</p></center><br>
+ </div> 
+</div>
+</div>
+</body>
+</html>
