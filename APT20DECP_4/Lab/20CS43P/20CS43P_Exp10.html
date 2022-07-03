@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-<title>Exp 4 | 20CS41P</title>
+<title>Exp 10 | 20CS43P</title>
 <style>
 @import "https://fonts.googleapis.com/css?family=Inconsolata";
 
@@ -98,37 +98,91 @@ th:nth-child(even),td:nth-child(even) {
     <div class="noise"></div>
     <div class="overlay"></div>
     <div class="terminal">
-        <h1><a href="20CS41P_Lab.html">20CS41P</a> | DATA STRUCTURE AND ALGORITHM WITH PYTHON (LAB)</h1>
+        <h1><a href="20CS43P_Lab.html">20CS43P</a> | OOPs AND DESIGN WITH JAVA (LAB)</h1>
         <hr color=" #1d5624">
-        <h2>Exp4: Program to implement Linear search, compute space time complexity and plot graph using Asymptotic notations.</h2>
-        
-    
+        <h2>Exp10: Design an interface & implement it like one that builds different types of toys and check compliance with ISP.</h2>
     <div class="cheat">
         <span class="errorcode">
-        <pre>
-            <code>
-#**********************************************************************************#
-# Program on Linear Search                                                         #
-#**********************************************************************************#
+                <pre>
+                    <code>
+/**************************************************************************
+Exp10:	Design an interface & implement it like one that builds different
+        types of toys and check compliance with ISP. 
+**************************************************************************/
 
- 
-n = int(input("Enter a number of element: "))
-l =[]
-for i in range(n):
-    x = int(input("Enter element: "))
-    l.append(x)
-print(l)
- 
-key = int(input("Enter key element: "))
-i = 0
-while(i < n):
-    if (key == l[i]):
-        print("Element found at {} position".format(i))
-        break
-    i += 1
-else:
-    print("Element not present in list")
-           </code>
+interface Toy {
+	void setprice(double price);
+	void setcolor(String color);
+}
+interface movable{
+	void move();
+}
+ interface flyable{
+	 void fly();
+	 
+ }
+class Toyhouse implements Toy{
+	double price;
+	String color;
+	public void setprice(double price)
+	{
+		this.price=price;
+	}
+	public void setcolor(String color)
+	{
+		this.color=color;
+	}
+}
+class Toycar implements Toy,movable{
+	double price;
+	String color;
+	public void setprice(double price)
+	{
+		this.price=price;
+	}
+	public void setcolor(String color)
+	{
+		this.color=color;
+	}
+	public void move() {
+		System.out.println("Toycar:start car");
+	}
+}
+class Toyplane  implements Toy,movable,flyable{
+	double price;
+	String color;
+	public void setprice(double price)
+	{
+		this.price=price;
+	}
+	public void setcolor(String color)
+	{
+		this.color=color;
+	}
+	public void move() {
+		System.out.println("Toycar:Start car");
+	}
+	public void fly() {
+		System.out.println("Toyplane:Start plane");
+}
+}
+
+
+class Exp10{
+	public static void main(String args[])
+	{
+		Toyhouse t=new Toyhouse();
+		t.setprice(100000);
+		t.setcolor("green");
+		Toycar t1=new Toycar();
+		t1.move();
+		System.out.println(+t.price);
+		System.out.println(t.color);
+		Toyplane t2=new Toyplane();
+		t2.fly();
+	}
+}
+            </code>
         </pre> 
         </span>
 </div>
@@ -138,25 +192,10 @@ else:
 <span class="errorcode">   
 <pre>
         <code>
-Enter a number of element: 5
-Enter element: 12
-Enter element: 56
-Enter element: 78
-Enter element: 98
-Enter element: 4
-[12, 56, 78, 98, 4]
-Enter key element: 56
-Element found at 1 position
-
-Enter a number of element: 5
-Enter element: 45
-Enter element: 12
-Enter element: 23
-Enter element: 2
-Enter element: 78
-[45, 12, 23, 2, 78]
-Enter key element: 56
-Element not present in list
+ToyCar:Start car
+100000.0
+green
+toyplane:start plane
         </code>
     </pre> 
 </span>
