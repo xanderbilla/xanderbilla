@@ -79,7 +79,7 @@ footer{
     margin-right: auto;
 }
 
-th, td{
+th, td, pre{
     font-size: 26px;
 }
 
@@ -89,6 +89,11 @@ tr:nth-child(even) {
 
 th:nth-child(even),td:nth-child(even) {
   background-color: #4a4b4b;
+}
+
+code{
+    color:aliceblue; 
+    font-size:20px
 }
 
 </style>
@@ -101,9 +106,342 @@ th:nth-child(even),td:nth-child(even) {
         <h1>20CS42P |<span class="errorcode"> Skill Test I</span></h1>
         <hr color=" #1d5624">
         
-            
-<br>
-    Last update: Jul 3 2022 | 10:19
+        <p style="color: #02ffff; font-size: 26;"><strong>1. Shell commands</strong></p>
+        <div class="cheat">
+            <table>
+                <tr align="center">
+                  <th style="width: 5%;">S. No</th>
+                  <th style="width: 15%;">command</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>1.</td>
+                  <td><code>date</code></td>
+                  <td>Use to display the current time in the given FORMAT, or set the system date.
+                    <br>
+                    <p style="color: #02ffff">Synatx: date [OPTION]... [+FORMAT]<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ date 
+Mon Jul  4 06:25:40 AM CDT 2022
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td><code>cal</code></td>
+                  <td>cal displays a simple calendar. If no arguments are specified,
+                    the current month is displayed.
+                    <br>
+                    <p style="color: #02ffff">Synatx: cal [options] [[[day] month] year]<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ cal
+     July 2022        
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+31                    
+
+billa@PROFESSOR:~$ cal -m January
+    January 2022      
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+30 31                 
+
+billa@PROFESSOR:~$ cal -y 2023
+                            2023
+      January               February               March          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+ 1  2  3  4  5  6  7            1  2  3  4            1  2  3  4  
+ 8  9 10 11 12 13 14   5  6  7  8  9 10 11   5  6  7  8  9 10 11  
+15 16 17 18 19 20 21  12 13 14 15 16 17 18  12 13 14 15 16 17 18  
+22 23 24 25 26 27 28  19 20 21 22 23 24 25  19 20 21 22 23 24 25  
+29 30 31              26 27 28              26 27 28 29 30 31     
+                                                                  
+
+       April                  May                   June          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1      1  2  3  4  5  6               1  2  3  
+ 2  3  4  5  6  7  8   7  8  9 10 11 12 13   4  5  6  7  8  9 10  
+ 9 10 11 12 13 14 15  14 15 16 17 18 19 20  11 12 13 14 15 16 17  
+16 17 18 19 20 21 22  21 22 23 24 25 26 27  18 19 20 21 22 23 24  
+23 24 25 26 27 28 29  28 29 30 31           25 26 27 28 29 30     
+30                                                                
+
+        July                 August              September        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5                  1  2  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   3  4  5  6  7  8  9  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  10 11 12 13 14 15 16  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  17 18 19 20 21 22 23  
+23 24 25 26 27 28 29  27 28 29 30 31        24 25 26 27 28 29 30  
+30 31                                                             
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+ 1  2  3  4  5  6  7            1  2  3  4                  1  2  
+ 8  9 10 11 12 13 14   5  6  7  8  9 10 11   3  4  5  6  7  8  9  
+15 16 17 18 19 20 21  12 13 14 15 16 17 18  10 11 12 13 14 15 16  
+22 23 24 25 26 27 28  19 20 21 22 23 24 25  17 18 19 20 21 22 23  
+29 30 31              26 27 28 29 30        24 25 26 27 28 29 30  
+                                            31                    
+
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td><code>sleep</code></td>
+                  <td>Use to hold the terminal for the specified amount of time. By default it takes time in seconds.
+                    <br>
+                    <p style="color: #02ffff">Synatx: sleep NUMBER[s | m | h]<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ man sleep
+billa@PROFESSOR:~$ sleep 10s
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td><code>ls</code></td>
+                  <td>list  information about the FILEs (the current directory by default). Sort entries alphabetically if none of -cftuvSUX nor --sort
+                    is specified.
+                    <br>
+                    <p style="color: #02ffff">Synatx: ls [OPTION]... [FILE]...<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ ls
+Desktop  Documents  DoNotOpen  Downloads
+
+billa@PROFESSOR:~$ ls -l
+total 44
+drwxr-xr-x  5 billa billa 4096 Jul  4 02:30 Desktop
+drwxr-xr-x  2 billa billa 4096 Jun 29 11:31 Documents
+drwxrwxr-x  3 billa billa 4096 Jul  4 00:52 DoNotOpen
+drwxr-xr-x  4 billa billa 4096 Jul  4 03:55 Downloads
+
+billa@PROFESSOR:~$ ls -A
+.bash_aliases.swp  .cache   Documents   .gnupg    .npm     .profile  .ssh                       .vscode
+.bash_history      .cert    DoNotOpen   
+
+billa@PROFESSOR:~$ ls -a
+.                  .bashrc  Documents   .lesshst  Pictures  snap     .vscode
+..                 .cache   DoNotOpen   
+
+billa@PROFESSOR:~$ ls -sort
+total 44
+4 drwxrwxr-x  3 billa 4096 Jul  4 00:52 DoNotOpen
+4 drwxr-xr-x  5 billa 4096 Jul  4 02:30 Desktop
+4 drwxr-xr-x  4 billa 4096 Jul  4 03:55 Downloads
+0 -rw-rw-r--  1 billa    0 Jul  4 06:07 sample
+
+billa@PROFESSOR:~$ ls snap/
+code  discord  firefox  snapd-desktop-integration  snap-store  spotify  telegram-desktop  vlc
+
+billa@PROFESSOR:~$ ls snap/ -l
+total 32
+drwxr-xr-x 4 billa billa 4096 Jun 29 12:20 code
+drwxr-xr-x 4 billa billa 4096 Jun 29 14:17 discord
+drwxr-xr-x 4 billa billa 4096 Jun 29 11:45 firefox
+drwxr-xr-x 5 billa billa 4096 Jun 29 11:44 snapd-desktop-integration
+drwxr-xr-x 5 billa billa 4096 Jun 30 03:02 snap-store
+drwxr-xr-x 4 billa billa 4096 Jun 29 15:28 spotify
+drwxr-xr-x 4 billa billa 4096 Jul  3 03:25 telegram-desktop
+drwxr-xr-x 4 billa billa 4096 Jun 29 12:48 vlc
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>5.</td>
+                  <td><code>pwd</code></td>
+                  <td>Use to display the current time in the given FORMAT, or set the system date.
+                    <br>
+                    <p style="color: #02ffff">Synatx: date [OPTION]... [+FORMAT]<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ date 
+Mon Jul  4 06:25:40 AM CDT 2022
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>6.</td>
+                  <td><code>mkdir</code></td>
+                  <td>Create the DIRECTORY(ies), if they do not already exist.
+                    <br>
+                    <p style="color: #02ffff">Synatx: mkdir [OPTION]... DIRECTORY...<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ mkdir Vikas 
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>7.</td>
+                  <td><code>rmdir</code></td>
+                  <td>Remove the DIRECTORY(ies), only if they already exist and empty.
+                    <br>
+                    <p style="color: #02ffff">Synatx: rmdir [OPTION]... DIRECTORY...<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ rmdir Vikas 
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>8.</td>
+                  <td><code>cd</code></td>
+                  <td>The cd utility shall change the working directory of the current shell execution environment
+                    <br>
+                    <p style="color: #02ffff">Synatx: cd [DIRECTORY]<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ cd Downloads/
+billa@PROFESSOR:~/Downloads$  
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>9.</td>
+                  <td><code>touch</code></td>
+                  <td>Update the access and modification times of each FILE to the current time.
+                    <br>
+                    <p style="color: #02ffff">Synatx: touch [OPTION]... FILE...<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ touch Vikas
+billa@PROFESSOR:~$ ls file1 -l
+-rw-rw-r-- 1 billa billa 0 Jul  4 07:21 file1 --> Note the time stamp
+billa@PROFESSOR:~$ touch file1 --> modified the time stamp using `touch` command  
+billa@PROFESSOR:~$ ls file1 -l
+-rw-rw-r-- 1 billa billa 0 Jul  4 07:22 file1 --> Note the time stamp again
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>10.</td>
+                  <td><code>cat</code></td>
+                  <td>concatenate files and print on the standard output
+                    <br>
+                    <p style="color: #02ffff">Synatx: cat [OPTION]... [FILE]...<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ cat > Sample ---> The `>` is used to create file
+This is Xander Billa.
+And who are you?
+^C
+billa@PROFESSOR:~$ cat Sample 
+This is Xander Billa.
+And who are you?
+billa@PROFESSOR:~$ 
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>11.</td>
+                  <td><code>cp</code></td>
+                  <td>Copy files/directories from one SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY
+                    <br>
+                    <p style="color: #02ffff">Synatx: cp [OPTION]...SOURCE DEST                        <br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ cp Downloads/ Pictures
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>12.</td>
+                  <td><code>mv</code></td>
+                  <td>Move files/directories from one SOURCE to DEST, or also used for renaming file/directory 
+                    <br>
+                    <p style="color: #02ffff">Synatx: mv [OPTION]...SOURCE DEST    <br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+            billa@PROFESSOR:~$ mv File1 Vikas  ---> Renaming file from File1 to Vikas
+            billa@PROFESSOR:~$ mv File1 /Dir1/Vikas
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>13.</td>
+                  <td><code>rename</code></td>
+                  <td>The cd utility shall change the working directory of the current shell execution environment
+                    <br>
+                    <p style="color: #02ffff">Synatx: cd [DIRECTORY]<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ cd Downloads/
+billa@PROFESSOR:~/Downloads$  
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>14.</td>
+                  <td><code>wc</code></td>
+                  <td>The cd utility shall change the working directory of the current shell execution environment
+                    <br>
+                    <p style="color: #02ffff">Synatx: cd [DIRECTORY]<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ cd Downloads/
+billa@PROFESSOR:~/Downloads$  
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+                <tr>
+                  <td>15.</td>
+                  <td><code>sort</code></td>
+                  <td>The cd utility shall change the working directory of the current shell execution environment
+                    <br>
+                    <p style="color: #02ffff">Synatx: cd [DIRECTORY]<br><br>
+                    Example:</p>
+                        <pre>
+                            <code>
+billa@PROFESSOR:~$ cd Downloads/
+billa@PROFESSOR:~/Downloads$  
+                            </code>
+                        </pre>
+                 </td>
+                </tr>
+            </table>
+    <br>
+        Last update: Jul 3 2022 | 10:19
     
   <div id="footer">
  
