@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-<title>Exp 9 | 20CS43P</title>
+<title>Exp 12 | 20CS43P</title>
 <style>
 @import "https://fonts.googleapis.com/css?family=Inconsolata";
 
@@ -100,7 +100,7 @@ th:nth-child(even),td:nth-child(even) {
     <div class="terminal">
         <h1><a href="20CS43P_Lab.html">20CS43P</a> | OOPs AND DESIGN WITH JAVA (LAB)</h1>
         <hr color=" #1d5624">
-        <h2>Exp9: Write a program to illustrate various strig manipulation in JAVA</h2>
+        <h2>Exp12. Write a JAVA code on interface</h2>
         
     
     <div class="cheat">
@@ -108,25 +108,38 @@ th:nth-child(even),td:nth-child(even) {
         <pre>
             <code>
 /***********************************************************************
-Exp9. Write a program to illustrate various strig manipulation in JAVA
+Exp12. Write a JAVA code on interface
 ************************************************************************/
  
-public class Exp9{
-    public static void main(String[] args) {
-        String a = "Nutushu";
-        String b = "computer";
-        String c = "easy Understanding";
-        String d1 = "Information Technology";
-        String d2 = "Information Technologies";
-        String e = "Chetan";
+interface Area{
+    float pi = 3.14f;
+    float compute(float x, float y);
+}
 
-        System.out.println("The upper caser of " + a + " is: " + a.toUpperCase());
-        System.out.println("After replacing 'n' with 'm' is: " + b.replace('n','m'));
-        System.out.println("The string after removing blanks: " + c.trim());
-        System.out.println("The equal string are: " + d1.equals(d2));
-        System.out.println("The length of the string " + e + " is: " + e.length());
+class Rectangle implements Area {
+    public float compute(float x, float y){
+        float a = x * y;
+        return a;
     }
+}
 
+class Circle implements Area {
+    public float compute(float x, float y){
+        float a = pi * x * y;
+        return a;
+    }
+}
+
+class Exp12{
+    public static void main(String[] args) {
+        Rectangle r = new Rectangle();
+        Circle c = new Circle();
+        Area a1;
+        a1 = r;
+        System.out.println("Area of Rectangle: " + a1.compute(10,20));
+        a1 = c;
+        System.out.println("Area of Circle: " + a1.compute(20,5));
+    }
 }
             </code>
         </pre> 
@@ -138,11 +151,8 @@ public class Exp9{
 <span class="errorcode">   
 <pre>
         <code>
-The upper caser of Nutushu is: NUTUSHU
-After replacing 'n' with 'm' is: computer
-The string after removing blanks: easy Understanding
-The equal string are: false
-The length of the string Chetan is: 6
+Area of Rectangle: 200.0
+Area of Circle: 314.0
         </code>
     </pre> 
 </span>

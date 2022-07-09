@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-<title>Exp 9 | 20CS43P</title>
+<title>Exp 14 | 20CS43P</title>
 <style>
 @import "https://fonts.googleapis.com/css?family=Inconsolata";
 
@@ -100,33 +100,87 @@ th:nth-child(even),td:nth-child(even) {
     <div class="terminal">
         <h1><a href="20CS43P_Lab.html">20CS43P</a> | OOPs AND DESIGN WITH JAVA (LAB)</h1>
         <hr color=" #1d5624">
-        <h2>Exp9: Write a program to illustrate various strig manipulation in JAVA</h2>
-        
-    
+        <h2>Exp14: Design an interface & implement it like one that builds different types of toys and check compliance with ISP.</h2>
     <div class="cheat">
         <span class="errorcode">
-        <pre>
-            <code>
-/***********************************************************************
-Exp9. Write a program to illustrate various strig manipulation in JAVA
-************************************************************************/
- 
-public class Exp9{
-    public static void main(String[] args) {
-        String a = "Nutushu";
-        String b = "computer";
-        String c = "easy Understanding";
-        String d1 = "Information Technology";
-        String d2 = "Information Technologies";
-        String e = "Chetan";
+                <pre>
+                    <code>
+/**************************************************************************
+Exp14:	Design an interface & implement it like one that builds different
+        types of toys and check compliance with ISP. 
+**************************************************************************/
 
-        System.out.println("The upper caser of " + a + " is: " + a.toUpperCase());
-        System.out.println("After replacing 'n' with 'm' is: " + b.replace('n','m'));
-        System.out.println("The string after removing blanks: " + c.trim());
-        System.out.println("The equal string are: " + d1.equals(d2));
-        System.out.println("The length of the string " + e + " is: " + e.length());
-    }
+interface Toy {
+	void setprice(double price);
+	void setcolor(String color);
+}
+interface movable{
+	void move();
+}
+ interface flyable{
+	 void fly();
+	 
+ }
+class Toyhouse implements Toy{
+	double price;
+	String color;
+	public void setprice(double price)
+	{
+		this.price=price;
+	}
+	public void setcolor(String color)
+	{
+		this.color=color;
+	}
+}
+class Toycar implements Toy,movable{
+	double price;
+	String color;
+	public void setprice(double price)
+	{
+		this.price=price;
+	}
+	public void setcolor(String color)
+	{
+		this.color=color;
+	}
+	public void move() {
+		System.out.println("Toycar:start car");
+	}
+}
+class Toyplane  implements Toy,movable,flyable{
+	double price;
+	String color;
+	public void setprice(double price)
+	{
+		this.price=price;
+	}
+	public void setcolor(String color)
+	{
+		this.color=color;
+	}
+	public void move() {
+		System.out.println("Toycar:Start car");
+	}
+	public void fly() {
+		System.out.println("Toyplane:Start plane");
+}
+}
 
+
+class Exp10{
+	public static void main(String args[])
+	{
+		Toyhouse t=new Toyhouse();
+		t.setprice(100000);
+		t.setcolor("green");
+		Toycar t1=new Toycar();
+		t1.move();
+		System.out.println(+t.price);
+		System.out.println(t.color);
+		Toyplane t2=new Toyplane();
+		t2.fly();
+	}
 }
             </code>
         </pre> 
@@ -138,11 +192,10 @@ public class Exp9{
 <span class="errorcode">   
 <pre>
         <code>
-The upper caser of Nutushu is: NUTUSHU
-After replacing 'n' with 'm' is: computer
-The string after removing blanks: easy Understanding
-The equal string are: false
-The length of the string Chetan is: 6
+ToyCar:Start car
+100000.0
+green
+toyplane:start plane
         </code>
     </pre> 
 </span>

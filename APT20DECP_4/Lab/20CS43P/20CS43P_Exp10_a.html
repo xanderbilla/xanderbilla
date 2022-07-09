@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-<title>Exp 10 | 20CS43P</title>
+<title>Exp 10_a | 20CS43P</title>
 <style>
 @import "https://fonts.googleapis.com/css?family=Inconsolata";
 
@@ -100,87 +100,29 @@ th:nth-child(even),td:nth-child(even) {
     <div class="terminal">
         <h1><a href="20CS43P_Lab.html">20CS43P</a> | OOPs AND DESIGN WITH JAVA (LAB)</h1>
         <hr color=" #1d5624">
-        <h2>Exp10: Design an interface & implement it like one that builds different types of toys and check compliance with ISP.</h2>
+        <h2>Exp10. Array concept.</h2>
+        <b>    a) Program to illustrate the use of declaration, instruction & 
+            initialization of JAVA array in a single dimension</b>
+        
+    
     <div class="cheat">
         <span class="errorcode">
-                <pre>
-                    <code>
-/**************************************************************************
-Exp10:	Design an interface & implement it like one that builds different
-        types of toys and check compliance with ISP. 
-**************************************************************************/
-
-interface Toy {
-	void setprice(double price);
-	void setcolor(String color);
-}
-interface movable{
-	void move();
-}
- interface flyable{
-	 void fly();
-	 
- }
-class Toyhouse implements Toy{
-	double price;
-	String color;
-	public void setprice(double price)
-	{
-		this.price=price;
-	}
-	public void setcolor(String color)
-	{
-		this.color=color;
-	}
-}
-class Toycar implements Toy,movable{
-	double price;
-	String color;
-	public void setprice(double price)
-	{
-		this.price=price;
-	}
-	public void setcolor(String color)
-	{
-		this.color=color;
-	}
-	public void move() {
-		System.out.println("Toycar:start car");
-	}
-}
-class Toyplane  implements Toy,movable,flyable{
-	double price;
-	String color;
-	public void setprice(double price)
-	{
-		this.price=price;
-	}
-	public void setcolor(String color)
-	{
-		this.color=color;
-	}
-	public void move() {
-		System.out.println("Toycar:Start car");
-	}
-	public void fly() {
-		System.out.println("Toyplane:Start plane");
-}
-}
-
-
-class Exp10{
-	public static void main(String args[])
-	{
-		Toyhouse t=new Toyhouse();
-		t.setprice(100000);
-		t.setcolor("green");
-		Toycar t1=new Toycar();
-		t1.move();
-		System.out.println(+t.price);
-		System.out.println(t.color);
-		Toyplane t2=new Toyplane();
-		t2.fly();
-	}
+        <pre>
+            <code>
+/***********************************************************************
+Exp10. Array concept.
+------------------------------------------------------------------------
+a) Program to illustrate the use of declaration, instruction & 
+   initialization of JAVA array in a single dimension
+************************************************************************/
+ 
+class Exp10_a{
+    public static void main(String[] args) {
+        int a[] = {33, 7, 4, 9};
+        for (int i = 0; i < a.length; i++){
+            System.out.println(a[i] + " ");
+        }
+    }
 }
             </code>
         </pre> 
@@ -192,10 +134,10 @@ class Exp10{
 <span class="errorcode">   
 <pre>
         <code>
-ToyCar:Start car
-100000.0
-green
-toyplane:start plane
+33 
+7 
+4 
+9 
         </code>
     </pre> 
 </span>

@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-<title>Exp 9 | 20CS43P</title>
+<title>Exp 11 | 20CS43P</title>
 <style>
 @import "https://fonts.googleapis.com/css?family=Inconsolata";
 
@@ -100,7 +100,7 @@ th:nth-child(even),td:nth-child(even) {
     <div class="terminal">
         <h1><a href="20CS43P_Lab.html">20CS43P</a> | OOPs AND DESIGN WITH JAVA (LAB)</h1>
         <hr color=" #1d5624">
-        <h2>Exp9: Write a program to illustrate various strig manipulation in JAVA</h2>
+        <h2>Exp11. Write a JAVA program on Abstraction</h2>
         
     
     <div class="cheat">
@@ -108,25 +108,32 @@ th:nth-child(even),td:nth-child(even) {
         <pre>
             <code>
 /***********************************************************************
-Exp9. Write a program to illustrate various strig manipulation in JAVA
+Exp11. Write a JAVA program on Abstraction
 ************************************************************************/
  
-public class Exp9{
-    public static void main(String[] args) {
-        String a = "Nutushu";
-        String b = "computer";
-        String c = "easy Understanding";
-        String d1 = "Information Technology";
-        String d2 = "Information Technologies";
-        String e = "Chetan";
+public abstruct{
+    abstruct void draw();
+}
 
-        System.out.println("The upper caser of " + a + " is: " + a.toUpperCase());
-        System.out.println("After replacing 'n' with 'm' is: " + b.replace('n','m'));
-        System.out.println("The string after removing blanks: " + c.trim());
-        System.out.println("The equal string are: " + d1.equals(d2));
-        System.out.println("The length of the string " + e + " is: " + e.length());
+class Rectangle extends Shape{
+    void draw(){
+        System.out.println("Drawing Rectangle")
     }
+}
 
+class Circle extends Shape{
+    void draw(){
+        System.out.println("Drawing Circle")
+    }
+}
+
+class Exp11{
+    public static void main(String[] args) {
+        Shape s1 = new Circle();
+        Shape s2 = new Rectangle();
+        s1.draw();
+        s2.draw();
+    }
 }
             </code>
         </pre> 
@@ -138,11 +145,8 @@ public class Exp9{
 <span class="errorcode">   
 <pre>
         <code>
-The upper caser of Nutushu is: NUTUSHU
-After replacing 'n' with 'm' is: computer
-The string after removing blanks: easy Understanding
-The equal string are: false
-The length of the string Chetan is: 6
+Drawing Rectangle
+Drawing Circle
         </code>
     </pre> 
 </span>

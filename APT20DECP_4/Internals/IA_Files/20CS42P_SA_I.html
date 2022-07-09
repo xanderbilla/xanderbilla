@@ -79,7 +79,7 @@ footer{
     margin-right: auto;
 }
 
-th, td, pre{
+th, td, p{
     font-size: 26px;
 }
 
@@ -106,7 +106,7 @@ code{
         <h1>20CS42P |<span class="errorcode"> Skill Test I</span></h1>
         <hr color=" #1d5624">
         
-        <p style="color: #02ffff; font-size: 26;"><strong>1. Shell commands</strong></p>
+        <h2>1. Shell commands</h2>
         <div class="cheat">
             <table>
                 <tr align="center">
@@ -397,14 +397,13 @@ billa@PROFESSOR:~$ cp Downloads/ Pictures
                 <tr>
                   <td>13.</td>
                   <td><code>rename</code></td>
-                  <td>The cd utility shall change the working directory of the current shell execution environment
+                  <td>The rename is a comamnd used to rename the directories.
                     <br>
-                    <p style="color: #02ffff">Synatx: cd [DIRECTORY]<br><br>
+                    <p style="color: #02ffff">Synatx: rename [OLD DIRECTORY NAME] [NEW DIRECTORY NAME]<br><br>
                     Example:</p>
                         <pre>
                             <code>
-billa@PROFESSOR:~$ cd Downloads/
-billa@PROFESSOR:~/Downloads$  
+billa@PROFESSOR:~$ rename Billa Professor
                             </code>
                         </pre>
                  </td>
@@ -412,14 +411,21 @@ billa@PROFESSOR:~/Downloads$
                 <tr>
                   <td>14.</td>
                   <td><code>wc</code></td>
-                  <td>The cd utility shall change the working directory of the current shell execution environment
+                  <td>Print  newline,  word,  and  byte  counts  for  each  FILE,  and  a  total  line  if more than one FILE is specified.  A word is a
+                    non-zero-length sequence of characters delimited by white space
                     <br>
-                    <p style="color: #02ffff">Synatx: cd [DIRECTORY]<br><br>
+                    <p style="color: #02ffff">Synatx: wc [OPTION]... [FILE]...                        <br><br>
                     Example:</p>
                         <pre>
                             <code>
-billa@PROFESSOR:~$ cd Downloads/
-billa@PROFESSOR:~/Downloads$  
+billa@PROFESSOR:~$ wc Sample 
+ 2  8 39 Sample
+billa@PROFESSOR:~$ wc -c Sample 
+39 Sample
+billa@PROFESSOR:~$ wc -l Sample 
+2 Sample
+billa@PROFESSOR:~$ wc -w Sample 
+8 Sample
                             </code>
                         </pre>
                  </td>
@@ -427,20 +433,217 @@ billa@PROFESSOR:~/Downloads$
                 <tr>
                   <td>15.</td>
                   <td><code>sort</code></td>
-                  <td>The cd utility shall change the working directory of the current shell execution environment
+                  <td>Write sorted concatenation of all FILE(s) to standard output.
                     <br>
-                    <p style="color: #02ffff">Synatx: cd [DIRECTORY]<br><br>
+                    <p style="color: #02ffff">Synatx: sort [OPTION]... [FILE]...<br><br>
                     Example:</p>
                         <pre>
                             <code>
-billa@PROFESSOR:~$ cd Downloads/
-billa@PROFESSOR:~/Downloads$  
+billa@PROFESSOR:~$ cat Sample 
+This is Xander Billa.
+And who are you?
+billa@PROFESSOR:~$ sort Sample 
+And who are you?
+This is Xander Billa. 
                             </code>
                         </pre>
                  </td>
                 </tr>
             </table>
+
+            <h2>2. Vi Editor with commands</strong></h2>
+
+        <p>
+            - Vim is a contarction of Vi improved is nan ecxtended version of the vi editor.
+            <br>- Vim implements a text based user interface to advance text editing, and is favored by many system administrators and 
+            <br>  softwares engineers for its efficiency and ability to be extensively customized
+            <br>- Vim also include useful features such as text completion, syntax highlighting, spel checking, and many more.
+            <br>- The <code>vim</code> command invoke the vim editoe
+            <br>- This command automatically redirects the user to vim when entered without file name as an arguments
+            <br>
+            <br>Syntax: <code>vim [file name]</code>
+<br>
+   <br>         If the file doesn't exist it will create a new one.
+
+        </p>
+        <p><strong>Vim Modes</strong></p>
+        <p>Vim is a modal editor and its different modes decide the functionality of various keys</p>
+        <table>
+            <tr align="center">
+              <th style="width: 10%;">Modes</th>
+              <th>Enable Users To</th>
+            </tr>
+            <tr>
+                <td>Insert</td>
+                <td>Insert text by typing<br>
+                    - To enable Execute mode press <code>i</code> key</td>
+            </td>
+            </tr>
+            <tr>
+                <td>Execute</td>
+                <td>- Execute commands within Editor<br>
+                    - To enable Execute mode press <code>: [command]</code> followed by <code>Esc</code> key</td>
+            </tr>
+            <tr>
+                <td>Command</td>
+                <td>- Perform different editingactions using keystrokes<br>
+                    - To enable command mode press <code>Esc</code> key</td>
+            </tr>
+            <tr>
+                <td>Visual</td>
+                <td>- Highlight or select text for copying, deleting, and so on<br>
+                    - To enable Execute mode press <code>v</code> key</td>
+            </td>
+            </tr>
+        </table>
     <br>
+    <p><strong>Editing operations</strong></p>
+        <p>Editing operators in command mode are powerful tools that can be used to manipulates text with simple keystrokes.</p>
+        <table>
+            <tr align="center">
+              <th style="width: 10%;">Editing</th>
+              <th style="width: 60%;">Enable Users To</th>
+            </tr>
+            <tr>
+                <td><code>x</code></td>
+                <td>Delete the character selected by the cursor</td>
+            </tr>
+            <tr>
+                <td><code>d</code></td>
+                <td>Delete text</td>
+            </tr>
+            <tr>
+                <td><code>dd</code></td>
+                <td>Delete the current line</td>
+            </tr>
+            <tr>
+                <td><code>p</code></td>
+                <td>Paste text on line directly below the cursor</td>
+            </tr>
+            <tr>
+                <td><code>P</code></td>
+                <td>Paste text on line directly above the cursor</td>
+            </tr>
+            <tr>
+                <td><code>/{text String}</code></td>
+                <td>Search through the document for specific text</td>
+            </tr>
+            <tr>
+                <td><code>?{text string}</code></td>
+                <td>Search backward through the document for specific text</td>
+            </tr>
+            <tr>
+                <td><code>y</code></td>
+                <td>Copy text<td>
+            </tr>
+            <tr>
+                <td><code>yy</code></td>
+                <td>Copy the line directly above the cursor</td>
+            </tr>
+            <tr>
+                <td><code>c{range of lines}</code></td>
+                <td>Begin a change in the specified range </td>
+            </tr>
+            <tr>
+                <td><code>u</code></td>
+                <td>Undo the latest chanegs<br></td>
+            </tr>
+            <tr>
+                <td><code>U</code></td>
+                <td>Undo all changes in the current line</td>
+            </tr>
+            <tr>
+                <td><code>ZZ</code></td>
+                <td>Write the file only if changes were maed, then quit the vim editor</td>
+            </tr>
+        </table>
+
+        <h2>3. Linux command related to process and management</strong></h2>
+
+        <p>
+             - A process is an instance of running program 
+        <br> - A process is said to be born when the program starts executuion and remain 
+            alive as long as the program is active 
+             - The kernal is responsible for management of process<br>
+             - The important attributes of a process are: 
+
+             <ol>
+                <li><strong>Process ID: </strong> Each process is uniquely identified by a unique integer value called PID or process ID</li>
+                <li><strong>Parent Process ID (PID): </strong>Parent also have the process ID</li>
+             </ol>
+        </p>
+
+        <p><strong>ps command</strong> <code>ps</code> command is used to view current runing processs on the system. It also determines memory 
+            usage, CPU usage, User ID, comand name etc.</p>
+            <p style="color: #02ffff">Synatx: ps [OPTION]<br><br>
+                Example:</p>
+                    <pre>
+                        <code>
+billa@PROFESSOR:~$ ps
+    PID TTY          TIME CMD
+  89384 pts/0    00:00:01 bash
+ 109954 pts/0    00:00:00 ps. 
+                        </code>
+                    </pre>
+
+<p><strong><code>ps</code> command options</strong></p>
+
+                    <table>
+                        <tr align="center">
+                          <th style="width: 10%;">option</th>
+                          <th style="width: 60%;">Used To</th>
+                        </tr>
+                        <tr>
+                            <td><code>a</code></td>
+                            <td>List all user-triggered processes</td>
+                        </tr>
+                        <tr>
+                            <td><code>-e</code></td>
+                            <td>List all process</td>
+                        </tr>
+                        <tr>
+                            <td><code>-l</code></td>
+                            <td>List processes using a long listing format</td>
+                        </tr>
+                        <tr>
+                            <td><code>u</code></td>
+                            <td>List process along with user name and start time</td>
+                        </tr>
+                        <tr>
+                            <td><code>r</code></td>
+                            <td>Exclude process that are not running currently</td>
+                        </tr>
+                        <tr>
+                            <td><code>x</code></td>
+                            <td>Include process without a terminal</td>
+                        </tr>
+                        <tr>
+                            <td><code>f</code></td>
+                            <td>Search backward through the document for specific text</td>
+                        </tr>
+                        <tr>
+                            <td><code>T</code></td>
+                            <td>Exclude process that were started by any terminal other than the current one<td>
+                        </tr>
+                        <tr>
+                            <td><code>-U</code></td>
+                            <td>Display the p</td>
+                        </tr>
+                        <tr>
+                            <td><code>-p</code></td>
+                            <td>Begin a change in the specified range </td>
+                        </tr>
+                        <tr>
+                            <td><code>-C</code></td>
+                            <td>Undo the latest chanegs<br></td>
+                        </tr>
+                        <tr>
+                            <td><code>--tty</code></td>
+                            <td>Undo all changes in the current line</td>
+                        </tr>
+                    </table>
+
+
         Last update: Jul 3 2022 | 10:19
     
   <div id="footer">
