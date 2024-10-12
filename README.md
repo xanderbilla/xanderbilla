@@ -10,4 +10,4 @@ I am a passionate software developer with experience in various programming lang
 
 | Section | Description |
 |---------|-------------|
-| [LPU Academics](https://github.com/xanderbilla/xanderbilla/wiki) | This section contain all the assignmets of V Semester |
+| [LPU Academics](https://gist.github.com/xanderbilla/69adf50dab0c8fddc0669b29f8e50116) | This section contain all the assignmets of V Semester |
